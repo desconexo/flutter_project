@@ -21,6 +21,7 @@ class ProductsPage extends StatelessWidget {
               ),
             ),
             ListTile(
+              leading: Icon(Icons.edit),
               title: Text('Manage Products'),
               onTap: () => Navigator.pushReplacementNamed(context, '/admin'),
             ),
@@ -33,6 +34,13 @@ class ProductsPage extends StatelessWidget {
           'EasyList',
           style: TextStyle(color: Colors.white),
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.favorite),
+            color: Colors.red,
+            onPressed: () => {},
+          ),
+        ],
       ),
       body: ProductManager(products),
     );
